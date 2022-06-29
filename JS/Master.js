@@ -7,32 +7,36 @@ window.onload = () => {
 
 // animating skill progress
 
-function animator(id, prog) {
-  const number = document.getElementById(id);
-  let counter = 0;
-  const interval = setInterval(() => {
-    counter += 1;
-    number.textContent = counter + "%";
-    // circle.style.animationName = name;
-    if (counter === prog) {
-      clearInterval(interval);
-    }
-  }, 20);
-}
+let skillsSect = document.getElementById("skills");
 
-animator("num-1", 65);
-animator("num-2", 60);
-animator("num-3", 70);
-animator("num-4", 80);
+function animate(endProg, selector, spanProgress) {
+  let startProg = 0;
+
+  let progress = setInterval(() => {
+    startProg++;
+    if (startProg === endProg) {
+      clearInterval(progress);
+    }
+    spanProgress.textContent = `${startProg}%`;
+    selector.style.background = `conic-gradient(#f0860c ${
+      startProg * 3.6
+    }deg, #111 0deg)`;
+  }, 50);
+}
+animate(95, document.getElementById("first"), document.getElementById("num-1"));
+animate(
+  90,
+  document.getElementById("second"),
+  document.getElementById("num-2")
+);
+animate(87, document.getElementById("third"), document.getElementById("num-3"));
+animate(
+  75,
+  document.getElementById("fourth"),
+  document.getElementById("num-4")
+);
 
 // pop up when clicking image in gallery.
-
-/* <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-</div> */
 
 let images = Array.from(document.querySelectorAll(".gallery .image img"));
 
@@ -64,19 +68,6 @@ images.forEach((img) => {
     };
   };
 });
-
-// responsive menu of links in small screens (max-width: 767px)
-// const list = document.getElementById("list");
-// const bars = document.getElementById("bars");
-
-// window.onresize = () => {
-//   if (window.innerWidth < 767) {
-//     list.style.display = "none";
-//     bars.style.display = "inline !important";
-//   } else {
-//     list.style.display = "block";
-//   }
-// };
 
 const bars = document.getElementById("bars");
 

@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./CSS/normalize.css" />
     <link rel="stylesheet" href="./CSS/bootstrap.css" />
     <link rel="stylesheet" href="./CSS/Amr.css" />
+    <link rel="stylesheet" href="./CSS/bounce.css" />
     <!-- Punch Of Scripts -->
     <script src="./JS/Master.js" defer></script>
     <script src="./JS/bootstrap.bundle.js" defer></script>
-    <!-- <script src="./JS/all.min.js" defer></script> -->
     <title>Amr.Dev | Welcome</title>
   </head>
   <body>
@@ -45,7 +45,7 @@
       <img src="./img/Picsart_22-05-24_13-17-21-528.png" alt="my-pic" />
       <div class="container">
         <div class="welcome-text" id="welcome-text">
-          <p class="welcome">Hi, I'm Amr</p>
+          <p class="welcome bounce">Hi, I'm Amr</p>
           <h1>Developer. Product<br />Person.</h1>
           <p class="text">
             Multidisciplinary designer who hacks at, makes and occasionally
@@ -66,99 +66,32 @@
       <h2 class="main-title">My Skills</h2>
       <div class="container">
         <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div id="num-1"></div>
-            </div>
+          <div class="circular-progress" id="first">
+            <span class="num" id="num-1">0%</span>
           </div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            width="160px"
-            height="160px"
-          >
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-          <h3 class="skill-title text-center">javaScript</h3>
+          <span class="words">HTML</span>
         </div>
         <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div id="num-2"></div>
-            </div>
+          <div class="circular-progress" id="second">
+            <span class="num" id="num-2">0%</span>
           </div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            width="160px"
-            height="160px"
-          >
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-          <h3 class="skill-title text-center">HTML</h3>
+          <span class="words">CSS</span>
         </div>
         <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div id="num-3"></div>
-            </div>
+          <div class="circular-progress" id="third">
+            <span class="num" id="num-3">0%</span>
           </div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            width="160px"
-            height="160px"
-          >
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-          <h3 class="skill-title text-center">CSS</h3>
+          <span class="words">javaScript</span>
         </div>
         <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div id="num-4"></div>
-            </div>
+          <div class="circular-progress" id="fourth">
+            <span class="num" id="num-4">0%</span>
           </div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            width="160px"
-            height="160px"
-          >
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle id="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-          <h3 class="skill-title text-center">bootstrap</h3>
+          <span class="words">Bootstrap</span>
         </div>
       </div>
     </div>
+
     <!-- End Skills -->
 
     <!-- Start Team -->

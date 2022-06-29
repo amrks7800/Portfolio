@@ -78,6 +78,14 @@ ul {
 .open {
   top: 75px !important;
 }
+.scroll-tracker {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 0.5rem;
+  background-color: var(--main-color);
+  transform-origin: left;
+  z-index: 99999999999999999999;
+}
 /* End Utilities */
 
 /* Start Header */
@@ -199,7 +207,7 @@ header .container a {
 }
 .landing .nav-anch {
   position: absolute;
-  left: 50% !important;
+  left: 50%;
   transform: translateX(-50%);
   bottom: 50px;
   color: var(--main-color);
@@ -229,6 +237,7 @@ header .container a {
   filter: grayscale(100%);
   z-index: -1;
   text-shadow: 0 0 20px 5px #fff;
+  filter: drop-shadow(0 5px 15px #eee);
 }
 .landing .welcome-text {
   margin-top: 75px;
@@ -277,48 +286,40 @@ header .container a {
 }
 .skills .container .skill {
   position: relative;
+  text-align: center;
 }
-.skills .container .skill .outer {
-  height: 160px;
-  width: 160px;
+
+.skills .container .skill .circular-progress {
+  width: 230px;
+  margin: 0 auto;
+  aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #000;
-  padding: 20px;
-  margin-left: 50px;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(#f0860c 3.6deg, #111 0deg);
+  position: relative;
+  row-gap: 20px;
 }
-.skills .container .skill .inner {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.skills .container .skill h3 {
-  color: var(--main-color);
-  margin-top: 20px;
-}
-circle {
-  fill: none;
-  stroke: url(#GradientColor);
-  stroke-width: 20px;
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
-  animation: anim 2s linear forwards;
-}
-svg {
+.skills .container .skill .circular-progress::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 50px;
-  z-index: 5;
+  background-color: #030303;
+  width: 190px;
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
-#num-1,
-#num-2,
-#num-3,
-#num-4 {
+.skills .container .skill .circular-progress .num {
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--main-color);
-  font-weight: 600;
+  z-index: 500;
+  position: absolute;
+}
+
+.skills .container .skill .words {
+  padding-top: 50px;
+  color: var(--main-color);
+  font-size: 2rem;
 }
 /* End Skills */
 
